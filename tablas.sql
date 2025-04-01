@@ -8,3 +8,9 @@ CREATE TABLE  Comida(
     xd VARCHAR(50)
 
 );
+
+CREATE TABLE Menu{
+    id_menu INT PRIMARY KEY SERIAL,
+    Nombre VARCHAR(50),
+    Categoria VARCHAR(50)
+}
