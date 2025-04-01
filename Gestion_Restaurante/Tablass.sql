@@ -72,7 +72,6 @@ CREATE TABLE DetallePedidos (
     ID_pedido INT,
     ID_plato INT,
     cantidad INT NOT NULL,
-    subtotal DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (ID_pedido) REFERENCES Pedidos(ID_pedido) ON DELETE CASCADE,
     FOREIGN KEY (ID_plato) REFERENCES Platos(ID_plato) ON DELETE CASCADE
 );
