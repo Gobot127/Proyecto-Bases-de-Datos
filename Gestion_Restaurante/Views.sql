@@ -16,3 +16,20 @@ LEFT JOIN Facturacion F ON P.ID_pedido = F.ID_pedido;
 
 --LLama al View para ver los detalles del pedido
 SELECT * FROM Vista_Resumen_Pedidos;
+
+--Vista de datalle platos
+
+CREATE OR REPLACE VIEW Vista_Detalle_Platos AS
+SELECT 
+    DP.ID_pedido,
+    C.nombre || ' ' || C.apellido AS cliente,
+    PL.nombre AS plato,
+    DP.cantidad,
+    P.fecha_pedido
+FROM DetallePedidos DP
+INNER JOIN Pedidos P ON DP.ID_pedido = P.ID_pedido
+INNER JOIN Clientes C ON P.ID_cliente = C.ID_cliente
+INNER JOIN Platos PL ON DP.ID_plato = PL.ID_plato;
+
+--LLama al View para ver los detalles de los platos
+SELECT * FROM  Vista_Detalle_Platos;
