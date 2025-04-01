@@ -17,7 +17,7 @@ LEFT JOIN Facturacion F ON P.ID_pedido = F.ID_pedido;
 --LLama al View para ver los detalles del pedido
 SELECT * FROM Vista_Resumen_Pedidos;
 
---Vista de datalle platos
+--Vista de detalle platos
 
 CREATE OR REPLACE VIEW Vista_Detalle_Platos AS
 SELECT 
