@@ -13,7 +13,7 @@ SET SESSION AUTHORIZATION lector;
 SELECT * FROM public.CLIENTES;
 
 CREATE TABLE Persona(
-  id_persona int primary key SERIAL
+  id_persona SERIAL PRIMARY KEY
 );
 /*PARA VOILVER AL USUARIO POSTGRESQL*/
 
