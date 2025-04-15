@@ -24,6 +24,11 @@ RESET SESSION AUTHORIZATION
 /*super usuario*/
 CREATE ROLE admin_restaurante WITH LOGIN PASSWORD 'usuarioSuper123' SUPERUSER;
 
+
+-- Dar todos los privilegios sobre la base de datos
+GRANT ALL PRIVILEGES ON DATABASE nombre_de_tu_base_de_datos TO admin_restaurante;
+
+
 /*AQUI HICIMOS UN ALTER PARA QUITARLE EL PERMISO AL SUPER USUARIO DE CREAR DATA BASES*/
 
 ALTER ROLE admin_restaurante WITH NOSUPERUSER NOCREATEDB;
